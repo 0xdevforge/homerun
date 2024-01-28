@@ -1,8 +1,19 @@
 import Image from 'next/image'
 import React from 'react'
-
+import localfont from 'next/font/local';
 import logo from '@/public/logo.png';
 import dropdown from '@/public/dropdown.svg';
+import regular from "next/font/local"
+
+const local = localfont({
+  src: './GTWalsheimPro-CondensedUltraBold.ttf',
+  display: 'swap',
+})
+const average = regular({
+  src: './GTWalsheimPro-Regular.ttf',
+  display: 'swap',
+})
+
 
 export default function Navbar() {
   return (
@@ -19,33 +30,33 @@ export default function Navbar() {
                   <Image src={dropdown} alt="dropdown" className='w-4 h-4' />
                 </div>
                 <div className="dropdown-menu  hidden absolute w-96 bg-white p-2 shadow space-y-2 rounded-lg  text-gray-700 -translate-y-2 pb-6">
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Career site & Job posts
-                    <span className='text-sm font-medium'>
+                    <span className= {`' ${average.className} text-sm font-medium'`} >
                       The best looking carrier site out there
                     </span>
                   </a>
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Applications Forms
-                    <span className='text-sm font-medium'>
+                    <span className= {`' ${average.className} text-sm font-medium'`} >
                       Forms for a great experience
                     </span>
                   </a>
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Application Tracking
-                    <span className='text-sm font-medium'>
+                    <span className= {`' ${average.className} text-sm font-medium'`} >
                       One clear overview for collaborative hiring
                     </span>
                   </a>
 
                   <div className="py-1 border-b-2"></div>
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Templates
                   </a>
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Integrations
                   </a>
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     All Features
                   </a>
                 </div>
@@ -64,27 +75,27 @@ export default function Navbar() {
                   <div className='columns-2 w-full items-center '>
 
                     <div className="items-start ">
-                      <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                      <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                         Startups
-                        <span className='text-sm font-medium'>
+                        <span className= {`' ${average.className} text-sm font-medium'`} >
                           B2B, B2C, tech companies
                         </span>
                       </a>
-                      <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                      <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                         Agencies
-                        <span className='text-sm font-medium'>
+                        <span className= {`' ${average.className} text-sm font-medium'`} >
                           Design, digital, advertising
                         </span>
                       </a>
-                      <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                      <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                         Hospitality
-                        <span className='text-sm font-medium'>
+                        <span className= {`' ${average.className} text-sm font-medium'`} >
                           Resturants, hotels, leisure
                         </span>
                       </a>
-                      <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                      <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                         E-commerce
-                        <span className='text-sm font-medium'>
+                        <span className= {`' ${average.className} text-sm font-medium'`} >
                           Online Shops, DTC
                         </span>
                       </a>
@@ -92,21 +103,21 @@ export default function Navbar() {
 
                     <div className="items-end ">
 
-                      <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                      <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                         Retail
-                        <span className='text-sm font-medium'>
+                        <span className= {`' ${average.className} text-sm font-medium'`} >
                           Local Business, shops
                         </span>
                       </a>
-                      <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                      <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                         Healthcare
-                        <span className='text-sm font-medium'>
+                        <span className= {`' ${average.className} text-sm font-medium'`} >
                           Care centers, treatment facilities
                         </span>
                       </a>
-                      <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                      <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                         Education
-                        <span className='text-sm font-medium'>
+                        <span className= {`' ${average.className} text-sm font-medium'`} >
                           Schools, trainings, museums
                         </span>
                       </a>
@@ -114,7 +125,7 @@ export default function Navbar() {
                       <div className="pt-1 pb-3">
                         <hr />
                       </div>
-                      <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                      <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                         All Customers
                       </a>
                     </div>
@@ -130,42 +141,42 @@ export default function Navbar() {
                   <Image src={dropdown} alt="dropdown" className='w-4 h-4' />
                 </div>
                 <div className="dropdown-menu  hidden absolute w-72 bg-white p-2 shadow space-y-2 rounded-lg  text-gray-700 -translate-y-2 pb-6">
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Blog
-                    <span className='text-sm font-medium'>
+                    <span className= {`' ${average.className} text-sm font-medium'`} >
                       Packed with practicial tips and advice
                     </span>
                   </a>
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Articles
-                    <span className='text-sm font-medium'>
+                    <span className= {`' ${average.className} text-sm font-medium'`} >
                       Actionable articles on all things hiring
                     </span>
                   </a>
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Guides
-                    <span className='text-sm font-medium'>
+                    <span className= {`' ${average.className} text-sm font-medium'`} >
                       Inspiring and useful guides on hiring
                     </span>
                   </a>
 
                   <div className="py-1 border-b-2"></div>
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Showcases
-                    <span className='text-sm font-medium'>
+                    <span className= {`' ${average.className} text-sm font-medium'`} >
                       JOb Posts and career pages we love
                     </span>
                   </a>
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Get started with Homerun
-                    <span className='text-sm font-medium'>
+                    <span className= {`' ${average.className} text-sm font-medium'`} >
                       Simple steps to help you set up
                     </span>
                   </a>
 
-                  <a className="rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap" href="#">
+                  <a className={`" ${local.className} navlinks  rounded-lg  hover:bg-[#f8f4f4] py-4 px-2  text-xl space-y-2 flex flex-col font-extrabold  whitespace-no-wrap"`} href="#">
                     Help center
-                    <span className='text-sm font-medium'>
+                    <span className= {`' ${average.className} text-sm font-medium'`} >
                       Advice and answers from Homerun
                     </span>
                   </a>

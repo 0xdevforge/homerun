@@ -4,11 +4,16 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 
 import logo from '@/public/logo.png';
-import dropdown from '@/public/dropdown.svg';
 import menu from '@/public/menu.png';
 import Link from 'next/link';
+import localFont from 'next/font/local'
 
 
+const navlinks = localFont({
+    src: './GTWalsheimPro-CondensedUltraBold.ttf',
+    display: 'swap',
+    weight:'400'
+  })
 
 export default function MobileNavbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +38,7 @@ export default function MobileNavbar() {
                     <Link href="/link1" className='font-semibold'>Log In</Link>
                     <div className="pt-6 border-b-2 -mx-20 border-gray-200"></div>
                     <div className="space-y-6 flex flex-col">
-                        <Link href="/link1" className='font-bold text-xl pt-4 text-black'>Product</Link>
+                        <Link href="/link1" className= {`'font-bold text-xl pt-4 text-black ${navlinks.className} ' `}>Product</Link>
                         <Link href="/link1" className='font-semibold'>Career sire & Job</Link>
                         <Link href="/link1" className='font-semibold'>Application Forms</Link>
                         <Link href="/link1" className='font-semibold'>Application tracking</Link>
@@ -53,7 +58,7 @@ export default function MobileNavbar() {
                     <div className="pt-4 border-b-2 -mx-20 border-gray-200"></div>
 
                     <div className="space-y-6 flex flex-col">
-                        <Link href="/link1" className='font-bold text-xl pt-4 text-black'>Blog</Link>
+                        <Link href="/link1" className= {`'font-bold text-xl pt-4 text-black ${navlinks.className} ' `}>Blog</Link>
                         <Link href="/link1" className='font-semibold'>Guides</Link>
                         <Link href="/link1" className='font-semibold'>Showcase</Link>
                         <Link href="/link1" className='font-semibold'>Get Started with Homerun</Link>

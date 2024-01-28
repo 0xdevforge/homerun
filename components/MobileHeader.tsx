@@ -3,6 +3,18 @@ import first from "@/public/1.svg";
 import second from "@/public/2.svg";
 import third from "@/public/3.svg";
 import Image from 'next/image';
+import localFont from 'next/font/local'
+
+
+
+
+const mobileHeading = localFont({
+    src: './GTWalsheimPro-CondensedUltraBold.ttf',
+    display: 'swap',
+    weight:'400'
+  })
+  
+  
 export default function MobileHeader() {
     return (
         <div className='bg-[#fbf9f5]-translate-y-12 min-h-screen mt-28 z-0  rounded-3xl'>
@@ -13,8 +25,9 @@ export default function MobileHeader() {
                 <Image src={first} alt="1st Svg" className='lg:mt-4 rotate-3' />
             </div>
             <div className="">
-                <h1 className='font-extrabold text-6xl text-center pb-6'>
-                    Your radically
+                <h1 className= {`' ${mobileHeading.className} mobileHeading font-extrabold text-6xl text-center ' `}>
+                    Your 
+                    <br /> radically
                     <br />
                     easy-to-
                     <br />use
@@ -22,7 +35,7 @@ export default function MobileHeader() {
                     hiring tool
                 </h1>
 
-                <div className="space-y-6 text-center">
+                <div className="space-y-6 text-center pt-6">
                 <h2 className='text-2xl'>
                     Don&apos;t let stellar talent fall through
                     the cracks of a messy hiring
