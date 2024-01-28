@@ -22,3 +22,13 @@ html,body,:root{
 
 /*mobile navbars*/
 
+.heading{
+font-weight: 900;
+font-size: 110px;
+line-height: 100%;
+letter-spacing: 0.02em;
+text-align: center;
+color: #2d2323;
+
+
+}
